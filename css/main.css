@@ -1,0 +1,12 @@
+main {
+  background-color: #000;
+  color: #fff;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 133px;
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+}
