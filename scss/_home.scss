@@ -1,0 +1,24 @@
+.home {
+
+   position: relative;
+   width: 100%;
+
+   &__title {
+      font-weight: 500;
+      font-size: 118px;
+      line-height: 108.5%;
+      letter-spacing: 0.01em;      
+   }
+
+   &__my-photo {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 43%;
+      height: 413px;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+   }
+}
+

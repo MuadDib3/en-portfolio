@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap');
+
 main {
    background-color: #000;
    color: #fff;
+   font-family: "DM Mono", sans-serif;
 }
 
 .wrapper {
@@ -8,9 +11,23 @@ main {
    padding: 0 133px;
    max-width: 1440px;
    width: 100%;
-   display: flex;
 }
 
 .content {
-
+   width: 70%;
+   padding-top: 13vh;
+   display: flex;
+   flex-direction: column;
+   gap: 210px;
 }
+
+.nav {
+   position: fixed;
+   top: 13vh;
+   left: 70%;
+   padding-left: 25px;
+}
+
+@import "_nav.scss";
+@import "_home.scss";
+@import "_services.scss"

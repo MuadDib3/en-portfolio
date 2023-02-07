@@ -1,0 +1,32 @@
+.nav {
+   &__contacts {
+      display: flex;
+      gap: 53px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+      margin-bottom: 173px;
+      text-transform: uppercase;
+   }
+
+   &__title {
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 104.2%;
+      margin-bottom: 45px;  
+   }
+
+   &__links {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+   }
+}
+.links {
+
+   &__item {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 24px;
+   }
+}
