@@ -1,0 +1,90 @@
+.portfolio {
+
+   display: flex;
+   flex-direction: column;
+   gap: 53px;
+
+   &__title {
+      font-family: "Rubik", serif;
+      font-weight: 400;
+      font-size: 48px;
+      line-height: 48px;
+      letter-spacing: 0.01em;
+   }
+
+   &__landings {
+      display: flex;
+      flex-direction: column;
+      gap: 53px;
+   }
+
+   &__stores {
+      display: flex;
+      flex-direction: column;
+      gap: 53px;
+   }
+}
+.landings, .stores {
+
+   &__title {
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 108.5%;
+      letter-spacing: 0.01em;
+   }
+
+   &__item {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+   }
+
+   &__more {
+      margin-top: -35px;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 108.5%;
+      letter-spacing: 0.01em;
+      text-decoration-line: underline;
+      align-self: center;
+   }
+}
+
+.portfolio .item {
+
+   &__title {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 108.5%;
+      letter-spacing: 0.01em;
+      &:before {
+         content: "";
+         display: inline-block;
+         width: 15px;
+         height: 15px;
+         margin-right: 18px;
+         background-color: #fff;
+         border-radius: 15px;
+      }
+   }
+
+   &__descr {
+      margin-left: 33px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 108.5%;
+      letter-spacing: 0.01em;
+      a {
+         text-decoration: underline;
+      }
+   }
+
+   &__galery {
+      margin-left: 33px;
+      width: 100%;
+      height: 394px;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+   }
+}

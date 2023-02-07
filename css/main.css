@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
 main {
   background-color: #000;
   color: #fff;
@@ -15,6 +16,7 @@ main {
 .content {
   width: 70%;
   padding-top: 13vh;
+  padding-bottom: 30vh;
   display: flex;
   flex-direction: column;
   gap: 210px;
@@ -49,6 +51,7 @@ main {
 }
 
 .links__item {
+  font-family: "Rubik", serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
@@ -81,6 +84,7 @@ main {
   gap: 53px;
 }
 .services__title {
+  font-family: "Rubik", serif;
   font-weight: 400;
   font-size: 48px;
   line-height: 48px;
@@ -103,4 +107,146 @@ main {
   font-size: 20px;
   line-height: 108.5%;
   letter-spacing: 0.01em;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 53px;
+}
+.skills__title {
+  font-family: "Rubik", serif;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: 0.01em;
+}
+.skills__item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.item__title {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 108.5%;
+  letter-spacing: 0.01em;
+}
+.item__text {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 108.5%;
+  letter-spacing: 0.01em;
+}
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  gap: 53px;
+}
+.portfolio__title {
+  font-family: "Rubik", serif;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: 0.01em;
+}
+.portfolio__landings {
+  display: flex;
+  flex-direction: column;
+  gap: 53px;
+}
+.portfolio__stores {
+  display: flex;
+  flex-direction: column;
+  gap: 53px;
+}
+
+.landings__title, .stores__title {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 108.5%;
+  letter-spacing: 0.01em;
+}
+.landings__item, .stores__item {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.landings__more, .stores__more {
+  margin-top: -35px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 108.5%;
+  letter-spacing: 0.01em;
+  text-decoration-line: underline;
+  align-self: center;
+}
+
+.portfolio .item__title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 108.5%;
+  letter-spacing: 0.01em;
+}
+.portfolio .item__title:before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 18px;
+  background-color: #fff;
+  border-radius: 15px;
+}
+.portfolio .item__descr {
+  margin-left: 33px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 108.5%;
+  letter-spacing: 0.01em;
+}
+.portfolio .item__descr a {
+  text-decoration: underline;
+}
+.portfolio .item__galery {
+  margin-left: 33px;
+  width: 100%;
+  height: 394px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 53px;
+}
+.contact__title {
+  font-family: "Rubik", serif;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: 0.01em;
+}
+.contact__item {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact .item__title {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 108.5%;
+  letter-spacing: 0.01em;
+}
+.contact .item__text {
+  font-family: "Rubik", serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  text-decoration-line: underline;
 }
