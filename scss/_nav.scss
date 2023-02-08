@@ -4,7 +4,7 @@
       gap: 53px;
       font-weight: 400;
       font-size: 16px;
-      line-height: 21px;
+      line-height: 131%;
       margin-bottom: 173px;
       text-transform: uppercase;
    }
@@ -28,6 +28,82 @@
       font-family: "Rubik", serif;
       font-weight: 400;
       font-size: 24px;
-      line-height: 24px;
+      line-height: 100%;
+   }
+}
+
+
+@media (max-width: 1300px) {
+   .nav {
+
+		&__contacts {
+         font-size: 14px;
+         margin-bottom: 150px;
+      }
+
+		&__title {
+         font-size: 32px;
+         margin-bottom: 40px;
+      }
+
+		&__links {
+         gap: 20px;
+      }
+}
+.links {
+
+		&__item {
+         font-size: 20px;
+      }
+   }
+}
+
+@media (max-width: 1100px) {
+   .nav {
+
+		&__contacts {
+         font-size: 12px;
+         margin-bottom: 118px;
+      }
+
+		&__title {
+         font-size: 25px;
+         margin-bottom: 35px;
+      }
+
+		&__links {
+         gap: 13px;
+      }
+}
+.links {
+
+		&__item {
+         font-size: 16px;
+      }
+   }
+}
+
+@media (max-width: 950px) {
+   .nav {
+
+		&__contacts {
+         font-size: calc(16*0.666px);
+         margin-bottom: 100px;
+      }
+
+		&__title {
+         font-size: calc(36*0.666px);
+         margin-bottom: 35\0px;
+      }
+
+		&__links {
+         gap: 12px;
+      }
+}
+.links {
+
+		&__item {
+         font-size: calc(20*0.666px);
+      }
    }
 }

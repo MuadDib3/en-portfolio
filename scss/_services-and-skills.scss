@@ -1,8 +1,9 @@
-.services {
+.text-block {
 
    display: flex;
    flex-direction: column;
    gap: 53px;
+   max-width: 78%;
 
    &__title {
       font-family: "Rubik", serif;
@@ -33,4 +34,31 @@
       line-height: 108.5%;
       letter-spacing: 0.01em;
    }
+}
+
+@media (max-width: 1100px) {
+   .text-block {
+
+      gap: 25px;
+
+		&__title {
+         font-size: calc(48*0.7px);
+      }
+
+		&__item {
+         gap: 12px;
+      }
+}
+
+.item {
+
+		&__title {
+         font-size: calc(32*0.7px);
+      }
+
+		&__text {
+         font-size: calc(20*0.7px);
+      }
+}
+
 }
