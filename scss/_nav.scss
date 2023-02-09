@@ -181,7 +181,8 @@
          grid-area: contacts;
       }
       &__button {
-         margin: 15px 0;
+         margin: 0;
+         padding: 15px 0;
          display: block;
          grid-area: button;
       }
