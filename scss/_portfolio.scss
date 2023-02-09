@@ -16,14 +16,12 @@
       display: flex;
       flex-direction: column;
       gap: 53px;
-      max-width: 93%;
    }
 
    &__stores {
       display: flex;
       flex-direction: column;
       gap: 53px;
-      max-width: 93%;
    }
 }
 .landings, .stores {
@@ -71,7 +69,7 @@
    }
 
    &__descr {
-      margin-left: 33px;
+      padding-left: 33px;
       font-weight: 500;
       font-size: 20px;
       line-height: 108.5%;
@@ -120,7 +118,7 @@
          margin-top: calc(-35*0.6px);
       }
 }
-.portfolio .item {
+   .portfolio .item {
 
 		&__title {
          font-size: calc(24*0.7px);
@@ -135,11 +133,11 @@
 
 		&__descr {
          font-size: calc(20*0.7px);
-         margin-left: 23px;
+         padding-left: 23px;
       }
 
 		&__galery {
-         margin-left: 23px;
+         padding-left: 23px;
       }
-} 
+   } 
 }

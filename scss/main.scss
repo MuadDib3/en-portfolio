@@ -6,7 +6,16 @@ html {
    color: #fff;
    font-family: "DM Mono", sans-serif;
    font-size: 16px;
+   overflow-x: hidden;
 }
+
+.no-scroll {
+   overflow: hidden;
+}
+
+// section {
+//    border: 1px solid #f50505;
+// }
 
 .wrapper {
    margin: 0 auto;
@@ -15,12 +24,13 @@ html {
    width: 100%;
    display: flex;
    justify-content: space-between;
+   gap: 25px;
 }
 
 .content {
    max-width: 860px;
    padding-top: 14vh;
-   padding-bottom: 30vh;
+   padding-bottom: 14vh;
    display: inline-flex;
    flex-direction: column;
    gap: 210px;
@@ -33,6 +43,7 @@ html {
    top: 14vh;
    right: 0;
    align-self: start;
+   // border: 1px solid #05f565;
 }
 
 
@@ -56,8 +67,27 @@ html {
 }
 
 @media (max-width: 950px) {
+   .wrapper {
+      gap: 15px;
+   }
    .content {
       gap: 105px;
+   }
+}
+
+@media (max-width: 650px) {
+   .wrapper {
+      padding: 0 20px;
+      flex-direction: column;
+   }
+   .content {
+      padding-top: 150px;
+   }
+   .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
    }
 }
 

@@ -1,8 +1,10 @@
-.home {
-
+.flex-conteiner {
    width: 100%;
    display: flex; 
    padding-bottom: 85px;
+}
+
+.home {
 
    &__title {
       flex-basis: 67%;
@@ -30,6 +32,22 @@
          left: 50%;
          transform: translateX(-50%);
       }
+   }
+
+   &__nav {
+      display: none;
+      gap: 45px;
+      justify-content: space-between;
+   }
+}
+
+.home .nav {
+   &__title {
+      flex-basis: 67%;
+   }
+
+   &__links {
+      flex-basis: 43%;
    }
 }
 
@@ -64,5 +82,26 @@
 @media (max-width: 720px) {
    .home__title {
       font-size: calc(118*0.4px);
+   }
+}
+
+@media (max-width: 650px) {
+   .home {
+      &__title {
+         flex-basis: 69%;
+      }
+      &__my-photo {
+         flex-basis: 30%;
+      }
+      &__nav {
+         display: flex;
+      }
+      .nav__title {
+         display: block;
+      }
+
+      .nav__links {
+         display: flex;
+      }
    }
 }

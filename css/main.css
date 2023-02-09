@@ -5,6 +5,11 @@ html {
   color: #fff;
   font-family: "DM Mono", sans-serif;
   font-size: 16px;
+  overflow-x: hidden;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .wrapper {
@@ -14,12 +19,13 @@ html {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  gap: 25px;
 }
 
 .content {
   max-width: 860px;
   padding-top: 14vh;
-  padding-bottom: 30vh;
+  padding-bottom: 14vh;
   display: inline-flex;
   flex-direction: column;
   gap: 210px;
@@ -54,12 +60,59 @@ html {
   flex-direction: column;
   gap: 22px;
 }
+.nav__button {
+  display: none;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 104.2%;
+  letter-spacing: 0.01em;
+  text-decoration-line: underline;
+}
+.nav__close {
+  margin-top: 15vh;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 108.5%;
+  letter-spacing: 0.01em;
+  text-decoration-line: underline;
+}
 
 .links__item {
   font-family: "Rubik", serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 100%;
+}
+
+.modal-nav {
+  transition: all 200ms ease-out;
+  height: 0px;
+  padding: 0px 0px;
+  overflow: hidden;
+}
+.modal-nav .nav__links {
+  display: flex;
+  gap: 5px;
+  transition: all 250ms ease-out;
+}
+.modal-nav .links__item {
+  font-size: 16px;
+  transition: all 250ms ease-out;
+}
+
+.modal-nav_active {
+  height: 100vh;
+  padding: 15px 0px 20px;
+  overflow: hidden;
+}
+.modal-nav_active .nav__links {
+  display: flex;
+  gap: 22px;
+}
+.modal-nav_active .links__item {
+  font-size: 22px;
 }
 
 @media (max-width: 1300px) {
@@ -110,11 +163,43 @@ html {
     font-size: 13.32px;
   }
 }
-.home {
+@media (max-width: 650px) {
+  .nav {
+    background-color: #000;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "button contacts" "modal modal";
+    padding: 0 20px;
+  }
+  .nav__links {
+    display: none;
+  }
+  .nav__title {
+    display: none;
+  }
+  .nav__contacts {
+    margin: 15px 0;
+    font-size: 16px;
+    line-height: 26px;
+    justify-content: end;
+    grid-area: contacts;
+  }
+  .nav__button {
+    margin: 15px 0;
+    display: block;
+    grid-area: button;
+  }
+  .modal-nav {
+    grid-area: modal;
+  }
+}
+.flex-conteiner {
   width: 100%;
   display: flex;
   padding-bottom: 85px;
 }
+
 .home__title {
   flex-basis: 67%;
   flex-shrink: 1;
@@ -141,6 +226,18 @@ html {
   left: 50%;
   transform: translateX(-50%);
 }
+.home__nav {
+  display: none;
+  gap: 45px;
+  justify-content: space-between;
+}
+
+.home .nav__title {
+  flex-basis: 67%;
+}
+.home .nav__links {
+  flex-basis: 43%;
+}
 
 @media (max-width: 1300px) {
   .home__title {
@@ -166,6 +263,23 @@ html {
 @media (max-width: 720px) {
   .home__title {
     font-size: 47.2px;
+  }
+}
+@media (max-width: 650px) {
+  .home__title {
+    flex-basis: 69%;
+  }
+  .home__my-photo {
+    flex-basis: 30%;
+  }
+  .home__nav {
+    display: flex;
+  }
+  .home .nav__title {
+    display: block;
+  }
+  .home .nav__links {
+    display: flex;
   }
 }
 .text-block {
@@ -217,6 +331,11 @@ html {
     font-size: 14px;
   }
 }
+@media (max-width: 650px) {
+  .text-block {
+    max-width: 100%;
+  }
+}
 .portfolio {
   display: flex;
   flex-direction: column;
@@ -233,13 +352,11 @@ html {
   display: flex;
   flex-direction: column;
   gap: 53px;
-  max-width: 93%;
 }
 .portfolio__stores {
   display: flex;
   flex-direction: column;
   gap: 53px;
-  max-width: 93%;
 }
 
 .landings__title, .stores__title {
@@ -279,7 +396,7 @@ html {
   border-radius: 15px;
 }
 .portfolio .item__descr {
-  margin-left: 33px;
+  padding-left: 33px;
   font-weight: 500;
   font-size: 20px;
   line-height: 108.5%;
@@ -328,10 +445,10 @@ html {
   }
   .portfolio .item__descr {
     font-size: 14px;
-    margin-left: 23px;
+    padding-left: 23px;
   }
   .portfolio .item__galery {
-    margin-left: 23px;
+    padding-left: 23px;
   }
 }
 .contact {
@@ -397,7 +514,25 @@ html {
   }
 }
 @media (max-width: 950px) {
+  .wrapper {
+    gap: 15px;
+  }
   .content {
     gap: 105px;
+  }
+}
+@media (max-width: 650px) {
+  .wrapper {
+    padding: 0 20px;
+    flex-direction: column;
+  }
+  .content {
+    padding-top: 150px;
+  }
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
 }

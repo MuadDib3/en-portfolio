@@ -21,6 +21,26 @@
       flex-direction: column;
       gap: 22px;
    }
+
+   &__button {
+      display: none;
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 104.2%;
+      letter-spacing: 0.01em;
+      text-decoration-line: underline;
+   }
+
+   &__close {
+      margin-top: 15vh;
+      margin-left: 50%;
+      transform: translateX(-50%);
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 108.5%;
+      letter-spacing: 0.01em;
+      text-decoration-line: underline;
+   }
 }
 .links {
 
@@ -32,6 +52,34 @@
    }
 }
 
+.modal-nav {
+   transition: all 200ms ease-out;
+   height: 0px;
+   padding: 0px 0px;
+   overflow: hidden;
+   .nav__links {
+      display: flex;
+      gap: 5px;
+      transition: all 250ms ease-out;
+   }
+   .links__item {
+      font-size: 16px;
+      transition: all 250ms ease-out;
+   }
+}
+
+.modal-nav_active {
+   height: 100vh;
+   padding: 15px 0px 20px;
+   overflow: hidden;
+   .nav__links {
+      display: flex;
+      gap: 22px;
+   }
+   .links__item {
+      font-size: 22px;
+   }
+}
 
 @media (max-width: 1300px) {
    .nav {
@@ -99,11 +147,46 @@
 		&__links {
          gap: 12px;
       }
-}
-.links {
+   }
+   .links {
 
 		&__item {
          font-size: calc(20*0.666px);
       }
+   }
+}
+
+@media (max-width: 650px) {
+   .nav {
+      background-color: #000;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows:  1fr;
+      grid-template-areas: "button contacts"
+                           "modal modal";
+      padding: 0 20px;
+
+      &__links {
+         display: none;
+      }
+      &__title {
+         display: none;
+      }
+
+      &__contacts {
+         margin: 15px 0;
+         font-size: 16px;
+         line-height: 26px;
+         justify-content: end;
+         grid-area: contacts;
+      }
+      &__button {
+         margin: 15px 0;
+         display: block;
+         grid-area: button;
+      }
+   }
+   .modal-nav {
+      grid-area: modal;
    }
 }

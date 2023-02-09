@@ -14,15 +14,27 @@
 <div class="wrapper">
 <div class="content">
    <section class="home">
-      <h1 class="home__title">
-         Hello,<br>
-         I’m <br>
-         <span>
-            Dima <br>
-            Valgaev
-         </span>
-      </h1>
-      <div class="home__my-photo"><img src="/img/myPhoto.png" alt="my photo"></div>
+      <div class="flex-conteiner">
+         <h1 class="home__title">
+            Hello,<br>
+            I’m <br>
+            <span>
+               Dima <br>
+               Valgaev
+            </span>
+         </h1>
+         <div class="home__my-photo"><img src="/img/myPhoto.png" alt="my photo"></div>
+      </div>
+      <div class="home__nav">
+         <h2 class="nav__title">Web&nbsp;Programmer<br>&amp;&nbsp;freelancer</h2>
+         <ul class="nav__links">
+            <li class="links__item">Home</li>
+            <li class="links__item">Services</li>
+            <li class="links__item">Skills</li>
+            <li class="links__item">Portfolio</li>
+            <li class="links__item">Contact</li>
+         </ul>
+      </div>
    </section>
    <section class="text-block services">
       <h3 class="text-block__title">Services</h3>
@@ -106,6 +118,7 @@
    </section>
 </div>
 <nav class="nav">
+   <button class="nav__button" onclick="toggleNav()">Menu</button>
    <div class="nav__contacts">
       <a href="mailto:myaddib3@gmail.com">Email</a>
       <a href="#">Telegram</a>
@@ -113,13 +126,24 @@
    <h2 class="nav__title">Web&nbsp;Programmer<br>&amp;&nbsp;freelancer</h2>
    <ul class="nav__links">
       <li class="links__item">Home</li>
-      <li class="links__item">text-block</li>
-      <li class="links__item">text-block</li>
+      <li class="links__item">Services</li>
+      <li class="links__item">Skills</li>
       <li class="links__item">Portfolio</li>
       <li class="links__item">Contact</li>
    </ul>
+   <div class="modal-nav" id="modal-nav">
+      <ul class="nav__links">
+         <li class="links__item">Home</li>
+         <li class="links__item">Services</li>
+         <li class="links__item">Skills</li>
+         <li class="links__item">Portfolio</li>
+         <li class="links__item">Contact</li>
+      </ul>
+      <button class="nav__close" onclick="toggleNav()">Close</button>
+   </div>
 </nav>
 </div>
 </main>
 </body>
+<script src="/js/script.js"></script>
 </html>

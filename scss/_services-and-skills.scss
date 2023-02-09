@@ -48,17 +48,22 @@
 		&__item {
          gap: 12px;
       }
+   }
+
+   .item {
+
+   		&__title {
+            font-size: calc(32*0.7px);
+         }
+
+   		&__text {
+            font-size: calc(20*0.7px);
+         }
+      }
 }
 
-.item {
-
-		&__title {
-         font-size: calc(32*0.7px);
-      }
-
-		&__text {
-         font-size: calc(20*0.7px);
-      }
-}
-
+@media (max-width: 650px) {
+   .text-block {
+      max-width: 100%;
+   }
 }
