@@ -7,6 +7,7 @@
    <title>Dima Valgaev</title>
    <link rel="stylesheet" href="/css/normalize.css">
    <link rel="stylesheet" href="/css/null.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
@@ -28,7 +29,6 @@
       <div class="home__nav">
          <h2 class="nav__title">Web&nbsp;Programmer<br>&amp;&nbsp;freelancer</h2>
          <ul class="nav__links">
-            <li><a class="links__item" data-goto=".home" href="#">Home</a></li>
             <li><a class="links__item" data-goto=".services" href="#">Services</a></li>
             <li><a class="links__item" data-goto=".skills" href="#">Skills</a></li>
             <li><a class="links__item" data-goto=".portfolio" href="#">Portfolio</a></li>
@@ -77,16 +77,28 @@
          <h4 class="landings__title">Landing pages</h4>
          <div class="landings__item">
             <h5 class="item__title">Moxa</h5>
-            <div class="item__descr">Designer portfolio site. My&nbsp;first study project. Only one page layout is&nbsp;presented, all links will lead to&nbsp;a&nbsp;stub site. <a href="https://muaddib3.github.io/moxa/index.html">See&nbsp;the&nbsp;site</a> </div>
+            <div class="item__descr">Designer portfolio site. My&nbsp;first study project. Only one page layout is&nbsp;presented, all links will lead to&nbsp;a&nbsp;stub site. <a href="https://muaddib3.github.io/moxa/index.html" target="_blank">See&nbsp;the&nbsp;site</a> </div>
             <div class="item__galery">
-               <img src="/img/portfolio/image 1.png" alt="site screenshot">
+               <div class="galery__swiper swiper">
+                 <!-- Additional required wrapper -->
+                 <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"><img src="/img/portfolio/moxa1.png" alt="moxa image"></div>
+                    <div class="swiper-slide"><img src="/img/portfolio/moxa2.png" alt="moxa image"></div>
+                    <div class="swiper-slide"><img src="/img/portfolio/moxa3.png" alt="moxa image"></div>
+                 </div>
+                  <!-- If we need navigation buttons -->
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+               
+               </div>
             </div>
          </div>
          <div class="landings__item">
             <h5 class="item__title">Jumbo</h5>
-            <div class="item__descr">Another educational project. Only one page layout is&nbsp;presented, all links will lead to&nbsp;a&nbsp;stub site. <a href="https://muaddib3.github.io/Jumbo/html/index.html">See&nbsp;the&nbsp;site</a> </div>
+            <div class="item__descr">Another educational project. Only one page layout is&nbsp;presented, all links will lead to&nbsp;a&nbsp;stub site. <a href="https://muaddib3.github.io/Jumbo/html/index.html" target="_blank">See&nbsp;the&nbsp;site</a> </div>
             <div class="item__galery">
-               <img src="/img/portfolio/image 1.png" alt="site screenshot">
+               <img src="/img/portfolio/moxa1.png" alt="site screenshot">
             </div>
          </div>
          <div class="landings__more">Show more</div>
@@ -96,10 +108,10 @@
          <div class="stores__item">
             <h5 class="item__title">Сlothing Store</h5>
             <div class="item__descr">Final educational project. Static layout of&nbsp;an&nbsp;online store without a&nbsp;backend, ready to&nbsp;land on&nbsp;any CMS. Layout according to&nbsp;the design layout in&nbsp;Figma.
-               <a href="https://clothing-store-by-dv.netlify.app/">See&nbsp;the&nbsp;site</a>
+               <a href="https://clothing-store-by-dv.netlify.app/" target="_blank">See&nbsp;the&nbsp;site</a>
             </div>
             <div class="item__galery">
-               <img src="/img/portfolio/image 1.png" alt="site screenshot">
+               <img src="/img/portfolio/moxa2.png" alt="site screenshot">
             </div>
          </div>
          <div class="stores__more">Show more</div>
@@ -109,23 +121,23 @@
       <h3 class="contact__title">Contact&nbsp;me</h3>
       <div class="contact__item">
          <h5 class="item__title">Email</h5>
-         <a class="item__text" href="mailto:myaddib3@gmail.com">myaddib3@gmail.com</a>
+         <a class="item__text" href="mailto:myaddib3@gmail.com" target="_blank">myaddib3@gmail.com</a>
       </div>
       <div class="contact__item">
          <h5 class="item__title">Telegram</h5>
-         <a class="item__text" href="https://t.me/myaddib3">myaddib3</a>
+         <a class="item__text" href="https://t.me/myaddib3" target="_blank">myaddib3</a>
       </div>
    </section>
 </div>
 <nav class="nav">
    <button class="nav__button" onclick="toggleNav()">Menu</button>
    <div class="nav__contacts">
-      <a href="mailto:myaddib3@gmail.com">Email</a>
-      <a href="#">Telegram</a>
+      <a href="mailto:myaddib3@gmail.com" target="_blank">Email</a>
+      <a href="https://t.me/myaddib3" target="_blank">Telegram</a>
    </div>
    <h2 class="nav__title">Web&nbsp;Programmer<br>&amp;&nbsp;freelancer</h2>
    <ul class="nav__links">
-      <li><a class="links__item" data-goto=".home" href="#">Home</a></li>
+      <li><a class="links__item links__item_active" data-goto=".home" href="#">Home</a></li>
       <li><a class="links__item" data-goto=".services" href="#">Services</a></li>
       <li><a class="links__item" data-goto=".skills" href="#">Skills</a></li>
       <li><a class="links__item" data-goto=".portfolio" href="#">Portfolio</a></li>
@@ -145,5 +157,6 @@
 </div>
 </main>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script src="/js/script.js"></script>
 </html>

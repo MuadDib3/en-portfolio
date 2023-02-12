@@ -50,6 +50,10 @@
       font-size: 24px;
       line-height: 100%;
    }
+
+   &__item_active {
+      color: rgb(151, 151, 151);
+   }
 }
 
 .modal-nav {
@@ -151,7 +155,7 @@
    .links {
 
 		&__item {
-         font-size: calc(20*0.666px);
+         font-size: calc(15px);
       }
    }
 }
