@@ -429,6 +429,7 @@ html {
   width: 35px;
 }
 .swiper-button-next:after {
+  content: "none";
   width: 35px;
   background-image: url(/img/arrow.png);
   background-size: contain;
@@ -441,6 +442,7 @@ html {
   width: 35px;
 }
 .swiper-button-prev:after {
+  content: "none";
   width: 35px;
   background-image: url(/img/arrow.png);
   background-size: contain;
