@@ -95,15 +95,29 @@
    height: auto;
  }
   
-.swiper-button-next:after {
-   width: 28px;
-   background-image: url(/img/arrow.svg);
+.swiper-button-next {
+   width: 35px;
+   &:after {
+      width: 35px;
+      background-image: url(/img/arrow.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      transform: rotate(90deg);
+   }
 }
 
-.swiper-button-prev::after {
-   width: 28px;
-   background-image: url(/img/arrow.svg);
-   transform: rotate(180deg);
+
+.swiper-button-prev {
+   width: 35px;
+   &:after {
+      width: 35px;
+      background-image: url(/img/arrow.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      transform: rotate(-90deg);
+   }
 }
 
 @media (max-width: 1100px) {
