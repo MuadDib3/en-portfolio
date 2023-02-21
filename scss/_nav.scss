@@ -11,7 +11,7 @@
 
    &__title {
       font-weight: 400;
-      font-size: 36px;
+      font-size: 34px;
       line-height: 104.2%;
       margin-bottom: 45px;  
    }
@@ -94,7 +94,7 @@
       }
 
 		&__title {
-         font-size: 32px;
+         font-size: 30px;
          margin-bottom: 40px;
       }
 
@@ -144,8 +144,8 @@
       }
 
 		&__title {
-         font-size: calc(36*0.666px);
-         margin-bottom: 35\0px;
+         font-size: 20px;
+         margin-bottom: 35px;
       }
 
 		&__links {
@@ -157,6 +157,12 @@
 		&__item {
          font-size: calc(15px);
       }
+   }
+}
+
+@media (max-width: 750px) {
+   .nav__title {
+      font-size: 18px;
    }
 }
 

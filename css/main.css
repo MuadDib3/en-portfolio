@@ -23,7 +23,7 @@ html {
 }
 
 .content {
-  max-width: 860px;
+  max-width: 73%;
   padding-top: 14vh;
   padding-bottom: 14vh;
   display: inline-flex;
@@ -32,12 +32,14 @@ html {
 }
 
 .nav {
+  width: 26%;
   position: -webkit-sticky;
   position: sticky;
   z-index: 100;
   top: 14vh;
   right: 0;
   align-self: start;
+  flex-shrink: 1;
 }
 
 .nav__contacts {
@@ -51,7 +53,7 @@ html {
 }
 .nav__title {
   font-weight: 400;
-  font-size: 36px;
+  font-size: 34px;
   line-height: 104.2%;
   margin-bottom: 45px;
 }
@@ -124,7 +126,7 @@ html {
     margin-bottom: 150px;
   }
   .nav__title {
-    font-size: 32px;
+    font-size: 30px;
     margin-bottom: 40px;
   }
   .nav__links {
@@ -156,14 +158,19 @@ html {
     margin-bottom: 100px;
   }
   .nav__title {
-    font-size: 23.976px;
-    margin-bottom: 35\0 px;
+    font-size: 20px;
+    margin-bottom: 35px;
   }
   .nav__links {
     gap: 12px;
   }
   .links__item {
     font-size: 15px;
+  }
+}
+@media (max-width: 750px) {
+  .nav__title {
+    font-size: 18px;
   }
 }
 @media (max-width: 650px) {
@@ -272,6 +279,7 @@ html {
 @media (max-width: 650px) {
   .home__title {
     flex-basis: 69%;
+    font-size: 41.3px;
   }
   .home__my-photo {
     flex-basis: 30%;
@@ -284,6 +292,11 @@ html {
   }
   .home .nav__links {
     display: flex;
+  }
+}
+@media (max-width: 350px) {
+  .home__title {
+    font-size: 23.6px;
   }
 }
 .text-block {
@@ -411,7 +424,7 @@ html {
 }
 .portfolio .item__galery {
   padding-left: 33px;
-  width: 100%;
+  max-width: 100%;
 }
 
 .galery__swiper {
@@ -421,6 +434,7 @@ html {
 }
 
 .swiper {
+  max-width: 100%;
   width: 100%;
   height: auto;
 }
@@ -544,7 +558,7 @@ html {
 }
 @media (max-width: 1100px) {
   .wrapper {
-    max-width: 910px;
+    max-width: 950px;
   }
   .content {
     gap: 165px;
@@ -557,6 +571,7 @@ html {
 @media (max-width: 950px) {
   .wrapper {
     gap: 15px;
+    padding: 0 25px;
   }
   .content {
     gap: 105px;
@@ -569,6 +584,7 @@ html {
   }
   .content {
     padding-top: 150px;
+    max-width: 100%;
   }
   .nav {
     position: fixed;

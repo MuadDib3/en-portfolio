@@ -89,6 +89,7 @@
    .home {
       &__title {
          flex-basis: 69%;
+         font-size: calc(118*0.35px);
       }
       &__my-photo {
          flex-basis: 30%;
@@ -103,5 +104,11 @@
       .nav__links {
          display: flex;
       }
+   }
+}
+
+@media (max-width: 350px) {
+   .home__title {
+      font-size: calc(118*0.2px);
    }
 }

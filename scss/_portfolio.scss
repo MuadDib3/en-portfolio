@@ -81,7 +81,7 @@
 
    &__galery {
       padding-left: 33px;
-      width: 100%;
+      max-width: 100%;
    }
 }
 
@@ -91,6 +91,7 @@
    min-width: 0;
 }
 .swiper {
+   max-width: 100%;
    width: 100%;
    height: auto;
  }
