@@ -11,7 +11,10 @@ function toggleNav () {
 }
 
 // css style gap from .content
-const contentGap = Number (window.getComputedStyle(document.querySelector('.content')).gap.slice(0, -2));
+   const content = document.querySelector('.content');
+   const contentStyles = window.getComputedStyle(content, null);
+   const contentGap = Number(contentStyles.getPropertyValue('row-gap').replace(/[^0-9]/g, ''));
+
 
 //scroll to section from nav
 
@@ -30,14 +33,14 @@ if (navLinks.length > 0) {
             const navModal = document.getElementById('modal-nav');
             navModal.classList.remove('modal-nav_active');
             document.documentElement.classList.remove("no-scroll");
-            const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY - document.querySelector('.nav__button').offsetHeight;
+            const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY - contentGap/2 - document.querySelector('.nav__button').offsetHeight;
             window.scrollTo({
                top: gotoBlockValue,
                behavior: "smooth",
             });
          }
          else {
-            const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY;
+            const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY - contentGap/2;
             window.scrollTo({
                top: gotoBlockValue,
                behavior: "smooth",
@@ -48,29 +51,46 @@ if (navLinks.length > 0) {
    }
 }
 
-//mark current section on nav
 
-window.addEventListener('scroll', () => {
-	let scrollDistance = window.scrollY;
 
-	document.querySelectorAll('section').forEach((el, i) => {
-      if (document.documentElement.clientWidth >= 650) {
+// throttle function for optimization
+function throttle(callee, timeout) {
 
+   let timer = null
+
+   return function perform(...args) {
+     if (timer) return
+ 
+     timer = setTimeout(() => {
+       callee(...args)
+       clearTimeout(timer)
+       timer = null
+     }, timeout)
+   }
+}
+
+// highlight current section on nav
+
+function highlightSection() {
+   let scrollDistance = window.scrollY; 
+
+   if (window.innerWidth > 650) {
+      document.querySelectorAll('.section').forEach((el, i) => {
          if (el.offsetTop - contentGap <= scrollDistance) {
+            console.log(el.offsetTop - contentGap);
             document.querySelectorAll('.nav a').forEach((el) => {
                if (el.classList.contains('links__item_active')) {
                   el.classList.remove('links__item_active');
                }
             });
+   
             document.querySelectorAll('.nav li')[i].querySelector('a').classList.add('links__item_active');
          }
-         //fix last link
          let pageHeight = Math.max(
             document.body.scrollHeight, document.documentElement.scrollHeight,
             document.body.offsetHeight, document.documentElement.offsetHeight,
             document.body.clientHeight, document.documentElement.clientHeight
           );
-
          if (pageHeight <= scrollDistance + document.documentElement.clientHeight + 1) {
             document.querySelectorAll('.nav a').forEach((el) => {
                if (el.classList.contains('links__item_active')) {
@@ -79,9 +99,12 @@ window.addEventListener('scroll', () => {
             });
             document.querySelectorAll('.nav li')[4].querySelector('a').classList.add('links__item_active');
          }
-      }
-	});
-});
+      });
+   }
+}
+
+const optomazedHighlightSection = throttle(highlightSection, 250);
+window.addEventListener('scroll', optomazedHighlightSection);
 
 
 //slider with Swiper
