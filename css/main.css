@@ -1,15 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
-@font-face {
-  font-family: "Bahnschrift";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Bahnschrift"), url("/fonts/Bahnschrift.ttf") format("ttf");
-}
 html {
   background-color: #000000;
   color: #fff;
-  font-family: "Bahnschrift", sans-serif;
+  font-family: "DM Mono", sans-serif;
   font-size: 16px;
   overflow-x: hidden;
 }
@@ -54,14 +48,14 @@ html {
   font-weight: 400;
   font-size: 16px;
   line-height: 131%;
-  margin-bottom: 143px;
+  margin-bottom: 173px;
   text-transform: uppercase;
 }
 .nav__title {
   font-weight: 400;
-  font-size: 32px;
-  line-height: 100.2%;
-  margin-bottom: 55px;
+  font-size: 34px;
+  line-height: 104.2%;
+  margin-bottom: 45px;
 }
 .nav__links {
   display: flex;
@@ -132,14 +126,14 @@ html {
     margin-bottom: 150px;
   }
   .nav__title {
-    font-size: 26px;
+    font-size: 30px;
     margin-bottom: 40px;
   }
   .nav__links {
     gap: 20px;
   }
   .links__item {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 @media (max-width: 1100px) {
@@ -148,7 +142,7 @@ html {
     margin-bottom: 118px;
   }
   .nav__title {
-    font-size: 21px;
+    font-size: 25px;
     margin-bottom: 35px;
   }
   .nav__links {
@@ -164,19 +158,19 @@ html {
     margin-bottom: 100px;
   }
   .nav__title {
-    font-size: 19px;
+    font-size: 20px;
     margin-bottom: 35px;
   }
   .nav__links {
     gap: 12px;
   }
   .links__item {
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 @media (max-width: 750px) {
   .nav__title {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 @media (max-width: 650px) {
@@ -221,8 +215,8 @@ html {
   flex-basis: 67%;
   flex-shrink: 1;
   font-weight: 500;
-  font-size: 100px;
-  line-height: 100.5%;
+  font-size: 118px;
+  line-height: 108.5%;
   letter-spacing: 0.01em;
   position: relative;
   z-index: 5;
@@ -422,7 +416,7 @@ html {
   padding-left: 33px;
   font-weight: 500;
   font-size: 20px;
-  line-height: 120.5%;
+  line-height: 108.5%;
   letter-spacing: 0.01em;
 }
 .portfolio .item__descr a {
